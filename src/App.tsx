@@ -1,5 +1,11 @@
 import React from 'react';
 
-const App = () => <div>Hello React!!!</div>;
+import Quote from './pages/Quote';
+
+const App = () => (
+  <div>
+    <Quote />
+  </div>
+);
 
 export default App;

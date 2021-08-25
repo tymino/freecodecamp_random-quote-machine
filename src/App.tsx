@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Quote from './pages/Quote';
+import Home from './pages/Home';
 
 const App = () => (
   <div>
-    <Quote />
+    <Home />
   </div>
 );
 

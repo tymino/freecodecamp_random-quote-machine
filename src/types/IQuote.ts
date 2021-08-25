@@ -1,3 +1,7 @@
+interface IQuoteProps {
+  color: string;
+}
+
 interface IQuote {
   quote: string;
   author: string;
@@ -8,6 +12,7 @@ interface IQuotes {
 }
 
 export type {
+  IQuoteProps,
   IQuote,
   IQuotes,
 }

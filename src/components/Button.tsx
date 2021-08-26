@@ -1,22 +1,19 @@
 import React from 'react';
 
-interface IButton {
-  content?: string;
-  btnType?: string;
-  color?: string;
-  onClick?: () => void;
-}
+import { IButtonProps } from '../types/IButton';
 
-const Buttom: React.FC<any> = ({ isImage, content, color, onClick }) => {
+const Button: React.FC<IButtonProps> = ({ id, isLink, isImage, content, color, onClick }) => {
   return (
     <button className="btn" onClick={onClick} style={{ background: color }}>
-      {isImage ? (
-        <img src={`./images/${content}-brands.svg`} alt={`${content}-brands`} />
-      ) : (
-        content
-      )}
+      <a id={id} href={isLink} rel="noreferrer" target='_blank'>
+        {isImage ? (
+          <img src={`./images/${content}-brands.svg`} alt={`${content}-brands`} />
+        ) : (
+          <p>{content}</p>
+        )}
+      </a>
     </button>
   );
 };
 
-export default Buttom;
+export default Button;

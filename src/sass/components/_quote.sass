@@ -1,0 +1,49 @@
+$sizeQuotes: 26px
+  
+.quote
+  display: flex
+  flex-direction: column
+
+  max-width: 550px
+  padding: 40px
+  background: white
+  border-radius: $borderRadius
+
+  &__text
+    position: relative
+
+    font-size: 1.75rem
+    font-weight: 500
+    text-indent: 30px
+    text-align: center
+    transition: color $delay
+
+    &--image
+      position: absolute
+      transform: translateX(-30px)
+      margin-top: 2px
+      position: absolute
+      width: $sizeQuotes
+      height: $sizeQuotes
+
+      path
+        transition: fill $delay
+
+  &__author
+    margin-top: 20px
+    align-self: flex-end
+    font-weight: 400
+    transition: color $delay
+
+  &__buttons
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-top: 30px
+
+    &--wrapper
+      display: flex
+      flex-direction: row
+
+.buttons--margin-left
+  margin-left: 10px

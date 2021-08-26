@@ -3,23 +3,21 @@ import React from 'react';
 import generateColor from '../utils/generateColor';
 
 import Quote from '../components/Quote';
-import Button from '../components/Button';
 
 const Home: React.FC = () => {
   const [color, setColor] = React.useState<string>('');
 
-  React.useEffect(() => {
+  const setNewColor = () => {
     setColor(generateColor());
+  };
+
+  React.useEffect(() => {
+    setNewColor();
   }, []);
 
   return (
-    <div className="home">
-      <Quote color={color} />
-      <div className="home__buttons">
-        <Button isImage content="twitter" color={color} />
-        <Button isImage content="tumblr" color={color} />
-        <Button content="New quote" color={color} />
-      </div>
+    <div className="home" style={{background: color}}>
+      <Quote color={color} setNewColor={setNewColor} />
     </div>
   );
 };

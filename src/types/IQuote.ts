@@ -1,5 +1,6 @@
 interface IQuoteProps {
   color: string;
+  setNewColor: () => void;
 }
 
 interface IQuote {
